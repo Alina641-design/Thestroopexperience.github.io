@@ -1,5 +1,5 @@
-Student name: your name 
-Student number: your student number
+Student name: Alina
+Student number: 744703
 Student class: IT1C
 GitHub Repository: https://github.com/Alina641-design/The-stroop-experience
 GitHub Pages URL: https://alina641-design.github.io/The-stroop-experience/

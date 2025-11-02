@@ -1,0 +1,464 @@
+   1: body {
+   2:     margin: 0;
+   3:     background-color: #F5F0E6;
+   4:     align-items: stretch;
+   5:     font-family: "Paprika", system-ui, sans-serif;
+   6:     line-height: 1.5;
+   7:     letter-spacing: 0.02em;
+   8:     overflow-x: hidden;  
+   9: }
+  10: 
+  11: .section-wrap {
+  12:     width: min(1200px, 100%);
+  13:     margin: 0 auto;
+  14:     padding: 0 clamp(1rem, 3vw, 3rem);
+  15: }
+  16: 
+  17: .header {
+  18:     position: relative;
+  19:     width: 100%;
+  20:     background-color: #1A2A3A;
+  21:     display: flex;
+  22:     justify-content: center;             
+  23:     align-items: center;
+  24:     padding: 0.5rem 3vw;
+  25:     min-height: 70px;
+  26: }
+  27: 
+  28: .brand {
+  29:     position: absolute;                 
+  30:     left: clamp(1rem, 3vw, 3rem);
+  31:     top: 50%;
+  32:     transform: translateY(-50%);
+  33:     display: flex;
+  34:     align-items: center;
+  35: }
+  36: 
+  37: .brand-logo {
+  38:     height: 70px;
+  39:     width: auto;
+  40: }
+  41: 
+  42: .nav {
+  43:     display: flex;
+  44:     justify-content: center;
+  45:     width: 100%;
+  46: }
+  47: 
+  48: .nav-list {
+  49:     list-style: none;
+  50:     display: flex;
+  51:     gap: 1.4rem;
+  52:     margin: 0;
+  53:     padding: 0;
+  54:     flex-wrap: wrap;                   
+  55: }
+  56: 
+  57: .nav-list > li > a {
+  58:     display: flex;
+  59:     align-items: center;
+  60:     justify-content: center;
+  61:     background-color: #C99700;
+  62:     color: #000;
+  63:     padding: 0.55rem 1.7rem;
+  64:     border-radius: 999px;
+  65:     text-decoration: none;
+  66:     font-size: 1rem;
+  67:     transition: 0.25s;
+  68:     white-space: nowrap;
+  69: }
+  70: 
+  71: .nav-list > li > a:hover {
+  72:     background-color: #ffcf3f;
+  73:     color: #1A2A3A;
+  74: }
+  75: 
+  76: .nav-list > li > a[aria-current="page"] {
+  77:     outline: 2px solid #F5F0E6;
+  78:     outline-offset: 3px;
+  79: }
+  80: 
+  81: .hero {
+  82:     position: relative;
+  83:     width: 100%;
+  84:     height: 300px;
+  85:     overflow: hidden;
+  86: }
+  87: 
+  88: .hero-image {
+  89:     width: 100%;
+  90:     height: 100%;
+  91:     object-fit: cover;
+  92:     display: block;
+  93: }
+  94: 
+  95: .hero-text {
+  96:     position: absolute;
+  97:     left: clamp(1.5rem, 3vw, 3rem);
+  98:     bottom: 2rem;
+  99:     font-size: clamp(3.1rem, 4vw, 4rem);
+ 100:     color: #FFFFFF;
+ 101:     text-shadow:
+ 102:         -2px -2px 0 #000,
+ 103:          2px -2px 0 #000,
+ 104:         -2px  2px 0 #000,
+ 105:          2px  2px 0 #000;
+ 106:     margin: 0;
+ 107:     line-height: 1.05;
+ 108: }
+ 109: 
+ 110: .intro-block {
+ 111:     width: min(1200px, 100%);
+ 112:     margin: 0 auto;
+ 113:     display: flex;
+ 114:     gap: 2.5rem;    
+ 115:     padding: 3rem 2rem 3rem 2rem;
+ 116:     background-color: #F5F0E6;
+ 117: }
+ 118: 
+ 119: .intro-text {
+ 120:     flex: 1 1 72%;                   
+ 121:     display: flex;
+ 122:     flex-direction: column;
+ 123:     gap: 2.5rem;
+ 124: }
+ 125: 
+ 126: .intro-text p {
+ 127:     margin: 0;
+ 128:     color: #1A2A3A;
+ 129:     font-size: 1.05rem;             
+ 130:     line-height: 1.65;             
+ 131: }
+ 132: 
+ 133: .intro-photos {
+ 134:     flex: 0 0 340px;                
+ 135:     display: flex;
+ 136:     flex-direction: column;
+ 137:     justify-content: space-between;
+ 138:     gap: 0;
+ 139: }
+ 140: 
+ 141: .intro-photos figure {
+ 142:     margin: 5px;
+ 143: }
+ 144: 
+ 145: .intro-photos img {
+ 146:     width: 100%;
+ 147:     height: 310px;                  
+ 148:     object-fit: cover;
+ 149:     display: block;
+ 150:     border-radius: 0.6rem;
+ 151: }
+ 152: 
+ 153: @media (max-width: 900px) {
+ 154:     .intro-block {
+ 155:         flex-direction: column;
+ 156:     }
+ 157: 
+ 158:     .intro-photos {
+ 159:         flex-direction: row;
+ 160:         flex-wrap: wrap;
+ 161:         gap: 1rem;
+ 162:     }
+ 163: 
+ 164:     .intro-photos img {
+ 165:         height: 180px;
+ 166:     }
+ 167: 
+ 168:     .header {
+ 169:         justify-content: flex-start;
+ 170:         padding-top: 4.5rem;             
+ 171:     }
+ 172: 
+ 173:     .brand {
+ 174:         top: 1rem;
+ 175:         transform: none;
+ 176:     }
+ 177: 
+ 178:     .nav {
+ 179:         justify-content: center;
+ 180:     }
+ 181: }
+ 182: 
+ 183: .shop-links {
+ 184:     width: 100%;
+ 185:     background-color: #F5F0E6;
+ 186:     padding: 2rem clamp(1rem, 3vw, 3rem);
+ 187: }
+ 188: 
+ 189: .shop-links__title {
+ 190:     text-align: center;
+ 191:     font-size: 1.6rem;
+ 192:     color: #1A2A3A;
+ 193:     margin: 0 0 1.6rem 0;
+ 194: }
+ 195: 
+ 196: .shop-links__list {
+ 197:     display: flex;
+ 198:     justify-content: center;   
+ 199:     gap: 8.1rem;              
+ 200:     list-style: none;
+ 201:     margin: 0;
+ 202:     padding: 0;
+ 203:     flex-wrap: wrap;
+ 204: }
+ 205: 
+ 206: .shop-links__list li {
+ 207:     flex: 0 0 auto;          
+ 208: }
+ 209: 
+ 210: .shop-link {
+ 211:     display: inline-flex;
+ 212:     align-items: center;
+ 213:     justify-content: center;
+ 214:     background-color: #C99700;
+ 215:     color: #000;
+ 216:     padding: 1.5rem 3.4rem;   
+ 217:     border-radius: 999px;
+ 218:     text-decoration: none;
+ 219:     transition: 0.25s;
+ 220: }
+ 221: 
+ 222: 
+ 223: 
+ 224: .shop-link:hover {
+ 225:     background-color: #ffcf3f;
+ 226:     color: #1A2A3A;
+ 227: }
+ 228: 
+ 229: 
+ 230: .store-links {
+ 231:     width: 100%;
+ 232:     background-color: #F5F0E6;
+ 233:     padding: 2.4rem clamp(1rem, 3vw, 3rem) 3rem clamp(1rem, 3vw, 3rem);
+ 234: }
+ 235: 
+ 236: .store-links__title {
+ 237:     text-align: center;
+ 238:     font-size: 1.55rem;
+ 239:     color: #1A2A3A;
+ 240:     margin: 0 0 1.8rem 0;
+ 241: }
+ 242: 
+ 243: 
+ 244: .store-cards {
+ 245:     list-style: none;
+ 246:     display: flex;
+ 247:     justify-content: center;
+ 248:     gap: 2.8rem;                     
+ 249:     margin: 0 0 3rem 0;
+ 250:     padding: 0;
+ 251: }
+ 252: 
+ 253: .store-card {
+ 254:     text-decoration: none;
+ 255:     color: inherit;
+ 256:     display: flex;
+ 257: }
+ 258: 
+ 259: .store-card figure {
+ 260:     display: flex;
+ 261:     flex-direction: column;
+ 262:     gap: 0.7rem;
+ 263:     align-items: center;
+ 264:     background: transparent;       
+ 265:     padding: 0;
+ 266:     transition: transform 0.25s ease, box-shadow 0.25s ease;
+ 267: }
+ 268: 
+ 269: .store-card img {
+ 270:     width: 320px;                    
+ 271:     height: 320px;
+ 272:     object-fit: cover;
+ 273:     border-radius: 1.6rem;           
+ 274:     display: block;
+ 275: }
+ 276: 
+ 277: .store-card figcaption {
+ 278:     font-size: 1.05rem;
+ 279:     color: #1A2A3A;
+ 280:     text-align: center;
+ 281: }
+ 282: 
+ 283: .store-card:hover figure {
+ 284:     transform: translateY(-6px) scale(1.03);
+ 285:     box-shadow: 0 18px 28px rgba(0,0,0,0.16);
+ 286: }
+ 287: 
+ 288: 
+ 289: .store-actions {
+ 290:     list-style: none;
+ 291:     display: flex;
+ 292:     justify-content: center;
+ 293:     gap: 4rem;
+ 294:     margin: 0;
+ 295:     padding: 0;
+ 296: }
+ 297: 
+ 298: .store-actions > li {
+ 299:     display: flex;
+ 300:     flex-direction: column;
+ 301:     align-items: center;
+ 302:     gap: 0.9rem;
+ 303: }
+ 304: 
+ 305: .action-circle {
+ 306:     display: flex;
+ 307:     width: 320px;                  
+ 308:     height: 320px;
+ 309:     background-color: #F5F0E6;
+ 310:     border-radius: 1.6rem;
+ 311:     align-items: center;
+ 312:     justify-content: center;
+ 313:     text-decoration: none;
+ 314:     transition: transform 0.25s ease, box-shadow 0.25s ease;
+ 315:     box-shadow: 0 0 0 rgba(0,0,0,0);
+ 316: }
+ 317: 
+ 318: .action-circle img {
+ 319:     width: 290px;                    
+ 320:     height: 290px;
+ 321:     object-fit: contain;
+ 322:     display: block;
+ 323: }
+ 324: 
+ 325: .action-circle:hover {
+ 326:     transform: translateY(-6px) scale(1.03);
+ 327:     box-shadow: 0 20px 32px rgba(0,0,0,0.16);
+ 328: }
+ 329: 
+ 330: .action-label {
+ 331:     margin: 0;
+ 332:     color: #1A2A3A;
+ 333:     font-size: 1.05rem;
+ 334:     text-align: center;
+ 335: }
+ 336: 
+ 337: .nav-list > li > a { text-transform: uppercase; }
+ 338: 
+ 339: h1, h2 { letter-spacing: 0.02em; }
+ 340: 
+ 341: .intro-text p { text-indent: 1.2em; word-spacing: 0.08em; line-height: 1.65; }
+ 342: 
+ 343: .lead::first-letter { display: inline-block; font-size: 2.2rem; line-height: 1; padding-right: 0.2rem; }
+ 344: 
+ 345: .nav-list > li > a:visited { color: #111; }
+ 346: .nav-list > li > a:active { color: #333; }
+ 347: .shop-link:visited { color: #000; }
+ 348: .shop-link:active { color: #1A2A3A; }
+ 349: 
+ 350: 
+ 351: .float-photo { float: left; margin: 0 1rem 1rem 0; }
+ 352: 
+ 353: .table,
+ 354: .striped { border-collapse: collapse; width: 100%; max-width: 900px; }
+ 355: .striped th, .striped td { border-width: 1px; border-style: solid; border-color: #ccc; padding: 0.6rem 0.8rem; text-align: left; }
+ 356: .striped tbody tr:nth-child(odd) { background-color: #FFF; }
+ 357: .striped tbody tr:nth-child(even) { background-color: #CFF; }
+ 358: 
+ 359: @media (max-width: 768px) {
+ 360: 	.nav-list { gap: 0.6rem; }
+ 361: 	.store-card img { width: 240px; height: 240px; }
+ 362: }
+ 363: @media (min-width: 769px) {
+ 364: 	.store-cards { gap: 2.8rem; }
+ 365: }
+ 366: 
+ 367: .intro-block
+ 368:  { align-items: stretch;
+ 369:  }
+ 370: 
+ 371: .site-footer {
+ 372:      background: #F5F0E6;
+ 373:       padding: 0 0 1.6rem 0;
+ 374:      }
+ 375: .footer-banner {
+ 376:      margin: 0; 
+ 377:     }
+ 378: .footer-banner img { 
+ 379:     width: 100%;
+ 380:      height: 150px; 
+ 381:      object-fit: cover; 
+ 382:      display: block; 
+ 383:     }
+ 384: .footer-inner { display: flex;
+ 385:      align-items: center; 
+ 386:      justify-content: center;
+ 387:       gap: 2.5rem;
+ 388:        padding: 1.6rem 1rem 0.8rem 1rem; 
+ 389:     }
+ 390: .footer-logo 
+ 391: { 
+ 392:     height: 56px;
+ 393:      width: auto; 
+ 394:      display: block;
+ 395:      }
+ 396: .footer-list { list-style: none; margin: 0; padding: 0; display: flex; gap: 2.2rem; flex-wrap: wrap; }
+ 397: .footer-list a { color: #1A2A3A; text-decoration: underline; }
+ 398: .footer-list a:hover { color: #000; }
+ 399: .copyright 
+ 400: { 
+ 401:     margin: 0;
+ 402:      text-align: center;
+ 403:       color: #1A2A3A; 
+ 404:       padding-top: 0.6rem;
+ 405:      }
+ 406: .store-panel {
+ 407: 	max-width: 1200px;
+ 408: 	margin: 2rem auto;
+ 409: 	padding: 2rem;
+ 410: 	background: #F5F0E6;
+ 411: 	border-radius: 18px;
+ 412: 	display: flex;
+ 413: 	gap: 3rem;
+ 414: }
+ 415: 
+ 416: .store-col {
+ 417: 	flex: 1 1 50%;
+ 418: 	display: flex;
+ 419: 	flex-direction: column;
+ 420: }
+ 421: 
+ 422: .store-title {
+ 423: 	font-size: 3rem;
+ 424: 	color: #1A2A3A;
+ 425: 	margin: 0 0 1rem 0;
+ 426: }
+ 427: 
+ 428: .store-col--about p {
+ 429: 	font-size: 1.35rem;
+ 430: 	line-height: 2;
+ 431: 	margin: 0 0 0.9rem 0;
+ 432: }
+ 433: 
+ 434: .store-col--info h3 {
+ 435: 	font-size: 2.1rem;
+ 436: 	color: #1A2A3A;
+ 437: 	margin: 1rem 0 0.4rem;
+ 438: }
+ 439: 
+ 440: .store-col--info p,
+ 441: .store-col--info li {
+ 442: 	font-size: 1.35rem;
+ 443: 	line-height: 2;
+ 444: }
+ 445: 
+ 446: .hours,
+ 447: .prices {
+ 448: 	list-style: none;
+ 449: 	margin: 0;
+ 450: 	padding: 0;
+ 451: }
+ 452: 
+ 453: .hours li { display: flex; gap: 0.6rem; font-size: 1.35rem; line-height: 2; }
+ 454: .hours .day { width: 190px; font-weight: 600; }
+ 455: 
+ 456: @media (max-width: 768px) {
+ 457: 	.store-panel { flex-direction: column; gap: 1.5rem; }
+ 458: 	.hours .day { width: auto; }
+ 459: }
+ 460: 
+ 461: /* Extra spacing between the two columns on Firma Stroop */
+ 462: .store-panel
+ 463:  {
+ 464:      gap: 10rem; }
